@@ -33,7 +33,7 @@ def main():
         
         print(f"Epoch {epoch+1:02d} | Loss: {loss.item():.4f} | Updated Loads: {load_parameters.detach().numpy().round(3)}")
 
-    print("\nOptimization completed successfully via differentiable programming!")
+    print("\nOptimization completed successfully")
 
 if __name__ == "__main__":
     main()
