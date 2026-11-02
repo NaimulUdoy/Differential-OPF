@@ -9,7 +9,7 @@ from config import X, P_LINE_MAX
 class DifferentiableOPFFunction(torch.autograd.Function):
     """
     Custom PyTorch function to enable backpropagation through an OPF problem 
-    using sensitivity analysis (implicit differentiation of KKT conditions)[cite: 1].
+    using sensitivity analysis (implicit differentiation of KKT conditions).
     """
     @staticmethod
     def forward(ctx, pd_tensor):
@@ -55,7 +55,7 @@ class DifferentiableOPFFunction(torch.autograd.Function):
         
         # Analytical or numerical sensitivity approximation (dx*/d_pd)
         # For demonstration, we construct an approximate linear sensitivity mapping matrix (S)
-        # matching the gradient flow principles discussed in the paper[cite: 1].
+        # matching the gradient flow principles discussed in the paper.
         num_buses = len(pd_tensor)
         sens_matrix = np.eye(num_buses) * 0.5  # Sensitivity multiplier approximation
         
